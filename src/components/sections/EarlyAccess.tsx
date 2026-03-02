@@ -55,7 +55,7 @@ export const EarlyAccess = () => {
     };
 
     return (
-        <Section id="early-access" className="relative overflow-hidden text-[#4a0404] pt-12 pb-12 lg:pb-28 border-b-[4px] border-[#d4af37] bg-gradient-to-b from-[#f4ecd8] to-[#fdfbf7]">
+        <Section id="early-access" className="relative overflow-hidden text-[#4a0404] pt-8 lg:pt-12 pb-4 lg:pb-10 border-b-[4px] border-[#d4af37] bg-gradient-to-b from-[#f4ecd8] to-[#fdfbf7]">
             {/* Elegant Background Patterns */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(212,175,55,0.06)_0%,transparent_70%)] rounded-full pointer-events-none translate-x-1/4 -translate-y-1/4"></div>
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(212,175,55,0.04)_0%,transparent_70%)] rounded-full pointer-events-none -translate-x-1/4 translate-y-1/4"></div>
@@ -63,7 +63,7 @@ export const EarlyAccess = () => {
             {/* Subtle Dotted Grid Overlay (optional for texture) */}
             <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.015] mix-blend-overlay pointer-events-none"></div>
 
-            <div className="relative z-10 max-w-4xl mx-auto text-center space-y-10 px-4">
+            <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6 lg:space-y-8 px-4">
                 <div className="space-y-6">
                     <div className="flex items-center justify-center gap-4">
                         <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#d4af37]"></div>
@@ -76,6 +76,15 @@ export const EarlyAccess = () => {
                     <p className="text-[#8b6914] text-lg md:text-xl font-heading italic max-w-2xl mx-auto">
                         Be the first to experience authentic heritage flavors and claim an exclusive 20% early-bird privileges on your inaugural royal feast.
                     </p>
+                    {/* Waitlist Incentive */}
+                    <div className="mt-6 flex justify-center">
+                        <div className="inline-flex items-center gap-2 bg-[#d4af37]/10 border border-[#d4af37]/30 px-6 py-3 rounded-full shadow-[0_4px_15px_rgba(212,175,55,0.05)]">
+                            <span className="text-[#d4af37] animate-pulse">🎁</span>
+                            <span className="text-[#4a0404] font-bold text-sm tracking-wide">
+                                EXCLUSIVE: First <span className="text-[#8f0f0d]">500</span> members receive a complimentary Royal Sample Box!
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="relative mx-auto max-w-lg mt-8">
@@ -90,7 +99,14 @@ export const EarlyAccess = () => {
                                 </svg>
                             </div>
                             <h3 className="text-3xl font-bold mb-3 font-heading text-[#4a0404]">Welcome Aboard!</h3>
-                            <p className="text-[#5d4037] leading-relaxed text-lg">{message}</p>
+                            <p className="text-[#5d4037] leading-relaxed text-lg mb-8">{message}</p>
+
+                            <Button
+                                onClick={() => setStatus('idle')}
+                                className="relative bg-[#fdfbf7] text-[#4a0404] hover:bg-[#d4af37]/20 border border-[#d4af37]/50 font-bold tracking-[2px] uppercase py-3 px-8 rounded-full text-sm transition-all duration-300 hover:scale-[1.02]"
+                            >
+                                Done
+                            </Button>
                         </div>
                     ) : (
                         <form onSubmit={handleSubmit} className="relative z-10 bg-gradient-to-br from-[#ffffff] to-[#fffcf5] p-10 rounded-2xl shadow-[0_20px_60px_rgba(107,10,9,0.05)] border border-[#d4af37]/30 text-left space-y-6">
@@ -123,22 +139,54 @@ export const EarlyAccess = () => {
                                 )}
                             </div>
 
-                            <div className="pt-2 relative z-10">
+                            <div className="pt-2 relative z-10 w-full group">
+                                <div className="absolute -inset-1 bg-gradient-to-r from-[#ffd700] to-[#d4af37] rounded-xl blur opacity-25 group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
                                 <Button
                                     type="submit"
                                     fullWidth
                                     disabled={status === 'loading'}
-                                    className="bg-gradient-to-r from-[#d4af37] to-[#b8860b] text-[#2b0202] hover:shadow-[0_10px_30px_rgba(212,175,55,0.4)] border border-[#ffd700]/50 font-bold tracking-[2px] uppercase py-4 rounded-xl text-sm transition-all duration-300 hover:scale-[1.02]"
+                                    className="relative bg-gradient-to-r from-[#d4af37] to-[#b8860b] text-[#2b0202] hover:shadow-[0_10px_30px_rgba(212,175,55,0.4)] border border-[#ffd700]/50 font-bold tracking-[2px] uppercase py-4 rounded-xl text-sm transition-all duration-300 hover:scale-[1.02]"
                                 >
                                     {status === 'loading' ? 'Securing Spot...' : 'Claim Early Access'}
                                 </Button>
                             </div>
 
-                            <p className="text-[11px] text-[#8b6914] text-center uppercase tracking-[2px] font-bold mt-6 opacity-70 relative z-10">
+                            <p className="text-[11px] text-[#8b6914] text-center uppercase tracking-[2px] font-bold mt-4 opacity-70 relative z-10">
                                 ~ We respect your privacy. No spam. ~
                             </p>
                         </form>
                     )}
+                </div>
+
+                {/* Trust Badges under Form */}
+                <div className="relative z-10 !mt-4 lg:!mt-4 flex flex-nowrap justify-center items-start gap-4 sm:gap-6 md:gap-12 opacity-80 overflow-hidden max-w-full mx-auto">
+                    <div className="flex flex-col items-center gap-2 group cursor-default flex-1 max-w-[100px] md:max-w-none">
+                        <div className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 rounded-full border border-[#d4af37]/40 flex items-center justify-center bg-white/50 backdrop-blur-sm group-hover:bg-[#d4af37]/10 transition-colors">
+                            <span className="text-[#8f0f0d] text-base md:text-xl">🌿</span>
+                        </div>
+                        <span className="text-[#4a0404] text-[9px] md:text-[11px] font-bold uppercase tracking-widest font-heading text-center leading-tight">
+                            <span className="block">100%</span>
+                            <span className="block">Organic</span>
+                        </span>
+                    </div>
+                    <div className="flex flex-col items-center gap-2 group cursor-default flex-1 max-w-[100px] md:max-w-none">
+                        <div className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 rounded-full border border-[#d4af37]/40 flex items-center justify-center bg-white/50 backdrop-blur-sm group-hover:bg-[#d4af37]/10 transition-colors">
+                            <span className="text-[#8f0f0d] text-base md:text-xl">✨</span>
+                        </div>
+                        <span className="text-[#4a0404] text-[9px] md:text-[11px] font-bold uppercase tracking-widest font-heading text-center leading-tight">
+                            <span className="block">Preservative</span>
+                            <span className="block">Free</span>
+                        </span>
+                    </div>
+                    <div className="flex flex-col items-center gap-2 group cursor-default flex-1 max-w-[100px] md:max-w-none">
+                        <div className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 rounded-full border border-[#d4af37]/40 flex items-center justify-center bg-white/50 backdrop-blur-sm group-hover:bg-[#d4af37]/10 transition-colors">
+                            <span className="text-[#8f0f0d] text-base md:text-xl">🤝</span>
+                        </div>
+                        <span className="text-[#4a0404] text-[9px] md:text-[11px] font-bold uppercase tracking-widest font-heading text-center leading-tight">
+                            <span className="block">Ethically</span>
+                            <span className="block">Sourced</span>
+                        </span>
+                    </div>
                 </div>
             </div>
         </Section>

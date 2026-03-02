@@ -25,12 +25,12 @@ const features = [
 
 export const WhyChooseUs = () => {
     return (
-        <Section className="py-10 lg:py-24 relative border-b-[4px] border-[#d4af37] bg-gradient-to-b from-[#fdfbf7] to-[#f4ecd8] overflow-hidden">
+        <Section id="why-us" className="!pt-4 !pb-2 lg:!pt-12 lg:!pb-8 relative border-b-[4px] border-[#d4af37] bg-gradient-to-b from-[#fdfbf7] to-[#f4ecd8] overflow-hidden">
             {/* Soft decorative background patterns */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(212,175,55,0.05)_0%,transparent_70%)] rounded-full pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(143,15,13,0.03)_0%,transparent_70%)] rounded-full pointer-events-none -translate-x-1/3 translate-y-1/3"></div>
 
-            <div className="text-center mb-8 lg:mb-16 space-y-4 relative z-10 px-4">
+            <div className="text-center mb-4 lg:mb-10 space-y-4 relative z-10 px-4">
                 <div className="flex justify-center mb-6">
                     <span className="inline-flex items-center gap-2 font-bold text-[#b8860b] uppercase tracking-[4px] text-xs px-4 py-1.5 border border-[#d4af37]/30 rounded-full bg-white/50 backdrop-blur-sm shadow-sm">
                         <span className="w-1.5 h-1.5 rotate-45 bg-[#8fc0f0d]"></span>
@@ -86,7 +86,7 @@ export const WhyChooseUs = () => {
                 ))}
             </div>
 
-            <div className="mt-10 lg:mt-16 text-center">
+            <div className="mt-4 lg:mt-10 text-center">
                 <div className="inline-block px-12 py-3 border-t border-b border-[#d4af37]/30 text-[#8b6914] italic font-heading text-lg">
                     Experience the uncompromised taste of royalty.
                 </div>

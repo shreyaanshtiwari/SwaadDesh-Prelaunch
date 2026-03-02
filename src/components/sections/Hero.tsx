@@ -12,7 +12,7 @@ export const Hero = () => {
     };
 
     return (
-        <section className="relative min-h-[70vh] flex items-center justify-center pt-8 pb-8 sm:pt-16 sm:pb-12 overflow-hidden bg-[#2b0202] border-b-[6px] border-[#d4af37]">
+        <section className="relative min-h-[60vh] flex items-center justify-center pt-32 pb-6 sm:pt-36 sm:pb-10 lg:pt-40 overflow-hidden bg-[#2b0202] border-b-[6px] border-[#d4af37]">
 
             {/* Immersive Background */}
             <div className="absolute inset-0 z-0">
@@ -79,7 +79,7 @@ export const Hero = () => {
                             <span className="flex items-center justify-center w-10 h-10 rounded-full border border-[#d4af37]/30 bg-black/20 backdrop-blur-sm">
                                 🔒
                             </span>
-                            <span className="text-sm tracking-wide">Invite Only<br />Waitlist</span>
+                            <span className="text-sm tracking-wide whitespace-nowrap">Invite Only Waitlist</span>
                         </div>
                     </div>
 
@@ -102,7 +102,7 @@ export const Hero = () => {
                 </div>
 
                 {/* Right: The Grand Royal Platter */}
-                <div className="lg:col-span-6 xl:col-span-5 relative h-full min-h-[350px] sm:min-h-[450px] flex items-center justify-center mt-2 lg:mt-0">
+                <div className="lg:col-span-6 xl:col-span-5 relative h-full min-h-[350px] sm:min-h-[450px] flex items-center justify-center -mt-6 lg:mt-0">
 
                     {/* Elaborate Framing */}
                     <div className="relative w-full aspect-square max-w-[280px] sm:max-w-[400px] lg:max-w-[500px] mx-auto">

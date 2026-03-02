@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const About = () => {
     return (
-        <section id="about" className="py-0 lg:py-28 relative overflow-hidden border-b-[4px] border-[#d4af37] bg-[#fffcf5]">
+        <section id="about" className="py-0 lg:py-16 relative overflow-hidden border-b-[4px] border-[#d4af37] bg-[#fffcf5]">
             {/* Soft decorative background elements */}
             <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(212,175,55,0.06)_0%,transparent_70%)] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(128,0,32,0.04)_0%,transparent_70%)] rounded-full pointer-events-none"></div>
@@ -41,36 +41,73 @@ export const About = () => {
                         </div>
 
                         <div className="space-y-6 text-[#5d4037] text-lg leading-relaxed font-body relative z-10 drop-shadow-none">
-                            <p className="text-[#4a0404] font-semibold text-xl italic font-heading">
+                            <p className="text-[#4a0404] font-semibold text-xl xl:text-2xl italic font-heading border-l-4 border-[#d4af37] pl-4">
                                 "Preserving the culinary jewels of India's glorious past, meant to be experienced, not just tasted."
                             </p>
                             <p>
                                 SwaadDesh was born from a profound nostalgia for majestic feasts. In a fast-paced modern world, the true essence of traditional delicacies is often lost. We journey across magnificent regions to uncover age-old recipes lost to time.
                             </p>
-                            <p>
-                                By sourcing only the finest native ingredients—exactly as they were used in royal kitchens centuries ago—and partnering exclusively with master local artisans, we ensure every bite connects you back to your deepest roots.
-                            </p>
                         </div>
 
-                        {/* Premium Badges */}
-                        <div className="flex flex-col sm:flex-row gap-8 pt-8 border-t border-[#d4af37]/40 lg:border-[#e0c080]/60 relative z-10 w-full lg:mb-0">
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-full bg-white border border-[#d4af37] shadow-sm flex items-center justify-center backdrop-blur-none">
-                                    <span className="text-xl">👑</span>
+                        {/* Heritage Journey Timeline */}
+                        <div className="py-4 relative z-10">
+                            <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#d4af37]/40 before:to-transparent">
+
+                                {/* Step 1 */}
+                                <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-full border border-[#d4af37] bg-white text-[#8f0f0d] shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:bg-[#fef5e7] transition-colors duration-300">
+                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                        </svg>
+                                    </div>
+                                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gradient-to-br from-[#ffffff] to-[#fffcf5] p-4 rounded-xl border border-[#d4af37]/20 shadow-[0_4px_15px_rgba(212,175,55,0.05)]">
+                                        <h4 className="font-bold text-[#4a0404] font-heading">Crafted by Regional Artisans</h4>
+                                        <p className="text-sm text-[#5d4037] mt-1">Our delicacies are painstakingly prepared using authentic, slow-cooking techniques of the past.</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <span className="block font-heading font-bold text-[#4a0404] text-lg drop-shadow-none">Authentic</span>
-                                    <span className="text-sm text-[#8b6914] uppercase tracking-widest text-[10px] font-bold">100% Traditional</span>
+
+                                {/* Step 2 */}
+                                <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-full border border-[#d4af37] bg-white text-[#8f0f0d] shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:bg-[#fef5e7] transition-colors duration-300">
+                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gradient-to-br from-[#ffffff] to-[#fffcf5] p-4 rounded-xl border border-[#d4af37]/20 shadow-[0_4px_15px_rgba(212,175,55,0.05)]">
+                                        <h4 className="font-bold text-[#4a0404] font-heading">Perfectly Quality Checked</h4>
+                                        <p className="text-sm text-[#5d4037] mt-1">Every batch is rigorously inspected by our experts to ensure uncompromised heritage quality.</p>
+                                    </div>
                                 </div>
+
+                                {/* Step 3 */}
+                                <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-full border border-[#d4af37] bg-white text-[#8f0f0d] shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:bg-[#fef5e7] transition-colors duration-300">
+                                        <span className="text-xl">👑</span>
+                                    </div>
+                                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gradient-to-br from-[#ffffff] to-[#fffcf5] p-4 rounded-xl border border-[#d4af37]/20 shadow-[0_4px_15px_rgba(212,175,55,0.05)]">
+                                        <h4 className="font-bold text-[#4a0404] font-heading">Delivered to your Doorstep</h4>
+                                        <p className="text-sm text-[#5d4037] mt-1">Experience the pure essence of Indian royalty, securely packaged and delivered to you.</p>
+                                    </div>
+                                </div>
+
                             </div>
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-full bg-white border border-[#d4af37] shadow-sm flex items-center justify-center backdrop-blur-none">
-                                    <span className="text-xl">🌿</span>
-                                </div>
-                                <div>
-                                    <span className="block font-heading font-bold text-[#4a0404] text-lg drop-shadow-none">Pure</span>
-                                    <span className="text-sm text-[#8b6914] uppercase tracking-widest text-[10px] font-bold">Native Ingredients</span>
-                                </div>
+                        </div>
+                        <div className="flex items-center gap-4">
+                            <div className="w-12 h-12 rounded-full bg-white border border-[#d4af37] shadow-sm flex items-center justify-center backdrop-blur-none">
+                                <span className="text-xl">👑</span>
+                            </div>
+                            <div>
+                                <span className="block font-heading font-bold text-[#4a0404] text-lg drop-shadow-none">Authentic</span>
+                                <span className="text-sm text-[#8b6914] uppercase tracking-widest text-[10px] font-bold">100% Traditional</span>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4">
+                            <div className="w-12 h-12 rounded-full bg-white border border-[#d4af37] shadow-sm flex items-center justify-center backdrop-blur-none">
+                                <span className="text-xl">🌿</span>
+                            </div>
+                            <div>
+                                <span className="block font-heading font-bold text-[#4a0404] text-lg drop-shadow-none">Pure</span>
+                                <span className="text-sm text-[#8b6914] uppercase tracking-widest text-[10px] font-bold">Native Ingredients</span>
                             </div>
                         </div>
                     </div>
@@ -91,8 +128,6 @@ export const About = () => {
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#4a0404]/10 via-transparent to-[#4a0404]/80 opacity-60"></div>
                             </div>
 
-                            {/* Decorative Arch Framing (outer) */}
-                            <div className="absolute inset-[-15px] border-[2px] border-[#d4af37] border-dashed rounded-t-full opacity-40 rounded-b-xl z-0 pointer-events-none"></div>
                         </div>
                     </div>
 

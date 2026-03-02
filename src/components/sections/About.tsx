@@ -1,36 +1,46 @@
 import React from 'react';
 import Image from 'next/image';
-import { Section } from '@/components/ui/Section';
 
 export const About = () => {
     return (
-        <Section id="about" className="py-28 relative overflow-hidden border-b-[4px] border-[#d4af37]">
+        <section id="about" className="py-0 lg:py-28 relative overflow-hidden border-b-[4px] border-[#d4af37] bg-[#fffcf5]">
             {/* Soft decorative background elements */}
             <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(212,175,55,0.06)_0%,transparent_70%)] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(128,0,32,0.04)_0%,transparent_70%)] rounded-full pointer-events-none"></div>
 
-            <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+            <div className="max-w-7xl mx-auto px-0 lg:px-8 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
 
+                    {/* Mobile Background Overlay */}
+                    <div className="absolute inset-0 z-0 lg:hidden pointer-events-none">
+                        <Image
+                            src="/heritage_palace.png"
+                            alt="Majestic Indian Heritage Architecture"
+                            fill
+                            className="object-cover opacity-15 grayscale"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#fdfbf7]/98 via-[#fef5e7]/90 to-[#fdfbf7]/98 mix-blend-overlay"></div>
+                    </div>
+
                     {/* Left: Royal Typography & Content */}
-                    <div className="space-y-8 order-2 lg:order-1 relative">
+                    <div className="space-y-8 order-2 lg:order-1 relative z-10 flex flex-col py-8 px-4 lg:py-0 lg:px-0">
                         {/* Decorative watermark */}
-                        <div className="absolute top-[-40px] left-0 text-[180px] text-[#d4af37] opacity-[0.06] font-heading select-none pointer-events-none leading-none">
+                        <div className="absolute top-[-40px] left-0 text-[180px] text-[#d4af37] opacity-[0.06] font-heading select-none pointer-events-none leading-none hidden lg:block">
                             S
                         </div>
 
                         <div className="space-y-5 relative z-10">
-                            <span className="inline-block text-[#b8860b] font-bold tracking-[4px] uppercase text-sm border-b border-[#d4af37]/40 pb-2">
+                            <span className="inline-block text-[#b8860b] font-bold tracking-[4px] uppercase text-sm border-b border-[#d4af37]/40 pb-2 drop-shadow-none">
                                 The Royal Legacy
                             </span>
-                            <h2 className="text-[48px] lg:text-[60px] font-black text-[#4a0404] font-heading leading-tight drop-shadow-sm">
+                            <h2 className="text-4xl md:text-[48px] lg:text-[60px] font-black text-[#4a0404] font-heading leading-tight drop-shadow-sm">
                                 A Heritage of <br />
                                 <i className="text-[#800020] font-light">Endless Flavors</i>
                             </h2>
-                            <div className="royal-separator !ml-0"></div>
+                            <div className="royal-separator !ml-0 hidden lg:block"></div>
                         </div>
 
-                        <div className="space-y-6 text-[#5d4037] text-lg leading-relaxed font-body relative z-10">
+                        <div className="space-y-6 text-[#5d4037] text-lg leading-relaxed font-body relative z-10 drop-shadow-none">
                             <p className="text-[#4a0404] font-semibold text-xl italic font-heading">
                                 "Preserving the culinary jewels of India's glorious past, meant to be experienced, not just tasted."
                             </p>
@@ -43,30 +53,30 @@ export const About = () => {
                         </div>
 
                         {/* Premium Badges */}
-                        <div className="flex flex-col sm:flex-row gap-8 pt-8 border-t border-[#e0c080]/60 relative z-10">
+                        <div className="flex flex-col sm:flex-row gap-8 pt-8 border-t border-[#d4af37]/40 lg:border-[#e0c080]/60 relative z-10 w-full lg:mb-0">
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-full bg-white border border-[#d4af37] shadow-sm flex items-center justify-center">
+                                <div className="w-12 h-12 rounded-full bg-white border border-[#d4af37] shadow-sm flex items-center justify-center backdrop-blur-none">
                                     <span className="text-xl">👑</span>
                                 </div>
                                 <div>
-                                    <span className="block font-heading font-bold text-[#4a0404] text-lg">Authentic</span>
+                                    <span className="block font-heading font-bold text-[#4a0404] text-lg drop-shadow-none">Authentic</span>
                                     <span className="text-sm text-[#8b6914] uppercase tracking-widest text-[10px] font-bold">100% Traditional</span>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-full bg-white border border-[#d4af37] shadow-sm flex items-center justify-center">
+                                <div className="w-12 h-12 rounded-full bg-white border border-[#d4af37] shadow-sm flex items-center justify-center backdrop-blur-none">
                                     <span className="text-xl">🌿</span>
                                 </div>
                                 <div>
-                                    <span className="block font-heading font-bold text-[#4a0404] text-lg">Pure</span>
+                                    <span className="block font-heading font-bold text-[#4a0404] text-lg drop-shadow-none">Pure</span>
                                     <span className="text-sm text-[#8b6914] uppercase tracking-widest text-[10px] font-bold">Native Ingredients</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Right: Indian Arch Royal Visuals */}
-                    <div className="relative h-[650px] w-full flex justify-center items-center order-1 lg:order-2">
+                    {/* Right: Indian Arch Royal Visuals (Hidden on Mobile) */}
+                    <div className="relative h-[400px] md:h-[650px] w-full flex justify-center items-center order-1 lg:order-2 mt-8 lg:mt-0 hidden lg:flex">
                         {/* The Royal Arch (Mehrab style) */}
                         <div className="relative w-[85%] h-[90%] bg-gradient-to-br from-[#ffffff] to-[#fff8eb] p-4 rounded-t-full shadow-[0_20px_60px_rgba(107,10,9,0.12)] border border-[#d4af37]/40 z-10 group">
 
@@ -88,6 +98,6 @@ export const About = () => {
 
                 </div>
             </div>
-        </Section>
+        </section>
     );
 };

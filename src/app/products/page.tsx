@@ -66,7 +66,7 @@ export default function ProductsPage() {
 
                     {/* Main Headline */}
                     <div className="space-y-4">
-                        <h1 className="text-4xl sm:text-5xl md:text-[60px] font-black leading-[1.05] text-[#fef5e7] font-heading drop-shadow-xl">
+                        <h1 className="text-4xl sm:text-5xl md:text-[60px] font-black leading-[1.1] md:leading-[1.05] text-[#fef5e7] font-heading drop-shadow-xl">
                             Authentic Flavors, <br className="hidden md:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ffd700] via-[#d4af37] to-[#b8860b]">
                                 Reborn.
@@ -85,58 +85,58 @@ export default function ProductsPage() {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-[60px] bg-gradient-to-b from-[#d4af37] to-transparent"></div>
 
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-10">
                         {productStories.map((product) => (
                             <Card key={product.id} className="group overflow-hidden rounded-[24px] border border-[#d4af37]/30 shadow-[0_15px_40px_rgba(107,10,9,0.08)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.25)] hover:-translate-y-3 transition-all duration-500 bg-white flex flex-col p-0 relative">
                                 {/* Elegant Corner accents */}
                                 <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#d4af37] rounded-tl-[24px] opacity-0 group-hover:opacity-100 transition-opacity z-20 pointer-events-none"></div>
                                 <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#d4af37] rounded-tr-[24px] opacity-0 group-hover:opacity-100 transition-opacity z-20 pointer-events-none"></div>
 
-                                <div className="relative h-80 overflow-hidden border-b border-[#d4af37]/20 bg-[#fdfbf7] p-8">
+                                <div className="relative h-40 md:h-80 overflow-hidden border-b border-[#d4af37]/20 bg-[#fdfbf7] p-2 md:p-8">
                                     <Image
                                         src={product.image}
                                         alt={product.name}
                                         fill
-                                        className="object-contain p-6 group-hover:scale-110 transition-transform duration-700 ease-out"
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="object-contain p-2 md:p-6 group-hover:scale-110 transition-transform duration-700 ease-out"
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 33vw"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent opacity-50 group-hover:opacity-70 transition-opacity duration-300 pointer-events-none"></div>
 
                                     {/* Origin Badge */}
-                                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-[#8f0f0d] text-xs font-bold px-4 py-1.5 rounded-full border border-[#d4af37] shadow-lg font-heading tracking-widest uppercase flex items-center gap-2 z-10">
-                                        <span>📍</span> {product.origin}
+                                    <div className="absolute top-2 left-2 md:top-4 md:left-4 bg-white/90 backdrop-blur-sm text-[#8f0f0d] text-[8px] md:text-xs font-bold px-2 py-1 md:px-4 md:py-1.5 rounded-full border border-[#d4af37] shadow-lg font-heading tracking-widest uppercase flex items-center gap-1 md:gap-2 z-10 w-max max-w-[90%] overflow-hidden">
+                                        <span className="text-[10px] md:text-sm">📍</span> <span className="truncate">{product.origin}</span>
                                     </div>
 
                                     {/* Floating Tagline */}
-                                    <div className="absolute bottom-6 left-6 right-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-10">
-                                        <p className="text-[#ffd700] font-heading italic text-lg leading-snug text-center font-medium drop-shadow-md">
+                                    <div className="absolute bottom-2 left-2 right-2 md:bottom-6 md:left-6 md:right-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-10">
+                                        <p className="text-[#ffd700] font-heading italic text-[10px] md:text-lg leading-tight md:leading-snug text-center font-medium drop-shadow-md line-clamp-2 md:line-clamp-none">
                                             "{product.tagline}"
                                         </p>
                                     </div>
                                 </div>
 
                                 {/* Bottom Content Area */}
-                                <div className="p-8 flex-1 flex flex-col bg-white relative z-20">
-                                    <h3 className="text-3xl font-bold text-[#4a0404] mb-3 font-heading drop-shadow-sm group-hover:text-[#8f0f0d] transition-colors">{product.name}</h3>
-                                    <p className="text-[#5d4037] flex-1 leading-relaxed text-sm mb-2">{product.description}</p>
+                                <div className="p-3 md:p-8 flex-1 flex flex-col bg-white relative z-20">
+                                    <h3 className="text-sm md:text-3xl font-bold text-[#4a0404] mb-1 md:mb-3 font-heading drop-shadow-sm group-hover:text-[#8f0f0d] transition-colors line-clamp-1">{product.name}</h3>
+                                    <p className="text-[#5d4037] flex-1 leading-snug md:leading-relaxed text-[10px] md:text-sm mb-2 line-clamp-2 lg:line-clamp-none">{product.description}</p>
 
                                     {/* Uncover the History Hint */}
-                                    <div className="pt-4 mt-auto border-t border-[#d4af37]/20 flex items-center gap-2 text-[#8b6914] text-xs font-bold uppercase tracking-widest relative z-[60] w-max group-hover:opacity-0 transition-opacity duration-300">
-                                        <span className="animate-pulse">📜</span> Hover to uncover legacy
+                                    <div className="pt-2 md:pt-4 mt-auto border-t border-[#d4af37]/20 flex items-center gap-1 md:gap-2 text-[#8b6914] text-[8px] md:text-xs font-bold uppercase tracking-wider md:tracking-widest relative z-[60] w-max group-hover:opacity-0 transition-opacity duration-300">
+                                        <span className="animate-pulse">📜</span> <span className="hidden sm:inline">Hover to uncover legacy</span><span className="inline sm:hidden">Legacy</span>
                                     </div>
                                 </div>
 
-                                {/* Legacy Content Overlay - Now structurally positioned OVER the ENTIRE CARD based on full card hover */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#2b0202] via-[#4a0404]/98 to-[#8f0f0d]/98 backdrop-blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out z-[100] p-8 flex flex-col justify-end text-[#fdfbf7] pointer-events-none group-hover:pointer-events-auto rounded-[24px]">
+                                {/* Legacy Content Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#2b0202] via-[#4a0404]/98 to-[#8f0f0d]/98 backdrop-blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out z-[100] p-4 md:p-8 flex flex-col justify-end text-[#fdfbf7] pointer-events-none group-hover:pointer-events-auto rounded-[24px]">
                                     <div className="relative z-10 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out delay-100 flex flex-col h-full pointer-events-auto">
                                         <div className="absolute -top-10 right-0 text-[#ffd700] opacity-10 transform -rotate-12 scale-150 pointer-events-none">
                                             ⚜️
                                         </div>
-                                        <h4 className="flex items-center gap-2 text-[#ffd700] font-bold uppercase tracking-[3px] text-xs mb-4 border-b border-[#d4af37]/30 pb-2">
-                                            <span className="text-xl">👑</span> The Royal Legacy
+                                        <h4 className="flex items-center gap-1 md:gap-2 text-[#ffd700] font-bold uppercase tracking-[2px] md:tracking-[3px] text-[10px] md:text-xs mb-2 md:mb-4 border-b border-[#d4af37]/30 pb-2">
+                                            <span className="text-sm md:text-xl">👑</span> The Royal Legacy
                                         </h4>
-                                        <div className="overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#d4af37]/80 scrollbar-track-transparent flex-1 pointer-events-auto pb-4">
-                                            <p className="text-sm leading-relaxed italic text-[#fef5e7] whitespace-pre-line drop-shadow-md cursor-text">
+                                        <div className="overflow-y-auto pr-2 md:pr-3 scrollbar-thin scrollbar-thumb-[#d4af37]/80 scrollbar-track-transparent flex-1 pointer-events-auto pb-2 md:pb-4">
+                                            <p className="text-[10px] md:text-sm leading-snug md:leading-relaxed italic text-[#fef5e7] whitespace-pre-line drop-shadow-md cursor-text">
                                                 {product.history}
                                             </p>
                                         </div>
@@ -154,10 +154,10 @@ export default function ProductsPage() {
                     <h2 className="text-3xl md:text-5xl font-black text-[#4a0404] font-heading">
                         Craving These Delicacies?
                     </h2>
-                    <p className="text-[#8b6914] text-lg font-heading italic">
+                    <p className="text-[#8b6914] text-base md:text-lg font-heading italic px-4">
                         Join our exclusive waitlist today and be the first to experience the true taste of India when we launch.
                     </p>
-                    <Link href="/#early-access" className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#8f0f0d] to-[#6b0a09] text-[#ffd700] font-bold tracking-[2px] uppercase rounded-full shadow-[0_10px_30px_rgba(143,15,13,0.3)] hover:shadow-[0_15px_40px_rgba(212,175,55,0.4)] hover:-translate-y-1 transition-all duration-300 border border-[#d4af37]/50 text-sm sm:text-base">
+                    <Link href="/#early-access" className="inline-flex items-center justify-center gap-3 px-8 md:px-10 py-4 md:py-5 bg-gradient-to-r from-[#8f0f0d] to-[#6b0a09] text-[#ffd700] font-bold tracking-[2px] uppercase rounded-full shadow-[0_10px_30px_rgba(143,15,13,0.3)] hover:shadow-[0_15px_40px_rgba(212,175,55,0.4)] hover:-translate-y-1 transition-all duration-300 border border-[#d4af37]/50 text-sm sm:text-base">
                         Join the Waitlist
                     </Link>
                 </div>

@@ -30,8 +30,8 @@ export const FAQ = () => {
     };
 
     return (
-        <Section className="py-28 relative border-b-[4px] border-[#d4af37]">
-            <div className="max-w-3xl mx-auto z-10 relative">
+        <Section className="pt-12 pb-12 lg:py-28 relative border-b-[4px] border-[#d4af37]">
+            <div className="max-w-3xl mx-auto z-10 relative px-4">
                 <div className="text-center mb-12 space-y-4">
                     <h2 className="text-3xl md:text-5xl font-black text-[#4a0404] font-heading drop-shadow-sm">Frequently Asked <i className="text-[#8f0f0d] font-light">Questions</i></h2>
                     <p className="text-[#8b6914] text-lg font-heading italic">Got questions? We've got answers.</p>

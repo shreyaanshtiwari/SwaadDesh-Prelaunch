@@ -12,7 +12,7 @@ export const Hero = () => {
     };
 
     return (
-        <section className="relative min-h-[70vh] flex items-center justify-center pt-16 pb-12 overflow-hidden bg-[#2b0202] border-b-[6px] border-[#d4af37]">
+        <section className="relative min-h-[70vh] flex items-center justify-center pt-8 pb-8 sm:pt-16 sm:pb-12 overflow-hidden bg-[#2b0202] border-b-[6px] border-[#d4af37]">
 
             {/* Immersive Background */}
             <div className="absolute inset-0 z-0">
@@ -48,13 +48,13 @@ export const Hero = () => {
 
                     {/* Main Headline */}
                     <div className="space-y-4">
-                        <h1 className="text-5xl sm:text-6xl md:text-[80px] font-black leading-[1.05] text-[#fef5e7] font-heading drop-shadow-xl">
+                        <h1 className="text-4xl sm:text-6xl md:text-[80px] font-black leading-[1.1] md:leading-[1.05] text-[#fef5e7] font-heading drop-shadow-xl">
                             Taste the <br className="hidden md:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ffd700] via-[#d4af37] to-[#b8860b]">
                                 Royal Legacy
                             </span>
                         </h1>
-                        <p className="text-[#e6d5c3] text-lg sm:text-xl md:text-2xl font-body font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        <p className="text-[#e6d5c3] text-base md:text-lg lg:text-xl xl:text-2xl font-body font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
                             Embark on a culinary journey through time. We deliver forgotten regional delicacies, crafted by master artisans, straight to your grand dining table.
                         </p>
                     </div>
@@ -84,28 +84,28 @@ export const Hero = () => {
                     </div>
 
                     {/* Trust Indicators */}
-                    <div className="pt-8 grid grid-cols-3 gap-4 border-t border-[#d4af37]/20 max-w-2xl mx-auto lg:mx-0">
+                    <div className="pt-8 grid grid-cols-3 gap-2 sm:gap-4 border-t border-[#d4af37]/20 max-w-2xl mx-auto lg:mx-0">
                         <div className="text-center lg:text-left space-y-1">
-                            <span className="block text-[#ffd700] font-black text-2xl md:text-3xl font-heading">100%</span>
-                            <span className="block text-[#e6d5c3]/70 text-[10px] sm:text-xs uppercase tracking-widest font-bold">Authentic</span>
+                            <span className="block text-[#ffd700] font-black text-xl sm:text-2xl md:text-3xl font-heading">100%</span>
+                            <span className="block text-[#e6d5c3]/70 text-[8px] sm:text-[10px] md:text-xs uppercase tracking-widest font-bold">Authentic</span>
                         </div>
-                        <div className="text-center lg:text-left space-y-1 border-l border-[#d4af37]/20 pl-4">
-                            <span className="block text-[#ffd700] font-black text-2xl md:text-3xl font-heading">Zero</span>
-                            <span className="block text-[#e6d5c3]/70 text-[10px] sm:text-xs uppercase tracking-widest font-bold">Preservatives</span>
+                        <div className="text-center lg:text-left space-y-1 border-l border-[#d4af37]/20 pl-2 sm:pl-4">
+                            <span className="block text-[#ffd700] font-black text-xl sm:text-2xl md:text-3xl font-heading">Zero</span>
+                            <span className="block text-[#e6d5c3]/70 text-[8px] sm:text-[10px] md:text-xs uppercase tracking-widest font-bold">Preservatives</span>
                         </div>
-                        <div className="text-center lg:text-left space-y-1 border-l border-[#d4af37]/20 pl-4">
-                            <span className="block text-[#ffd700] font-black text-2xl md:text-3xl font-heading">Pure</span>
-                            <span className="block text-[#e6d5c3]/70 text-[10px] sm:text-xs uppercase tracking-widest font-bold">Ingredients</span>
+                        <div className="text-center lg:text-left space-y-1 border-l border-[#d4af37]/20 pl-2 sm:pl-4">
+                            <span className="block text-[#ffd700] font-black text-xl sm:text-2xl md:text-3xl font-heading">Pure</span>
+                            <span className="block text-[#e6d5c3]/70 text-[8px] sm:text-[10px] md:text-xs uppercase tracking-widest font-bold">Ingredients</span>
                         </div>
                     </div>
 
                 </div>
 
                 {/* Right: The Grand Royal Platter */}
-                <div className="lg:col-span-6 xl:col-span-5 relative h-full min-h-[450px] flex items-center justify-center mt-8 lg:mt-0">
+                <div className="lg:col-span-6 xl:col-span-5 relative h-full min-h-[350px] sm:min-h-[450px] flex items-center justify-center mt-2 lg:mt-0">
 
                     {/* Elaborate Framing */}
-                    <div className="relative w-full aspect-square max-w-[500px]">
+                    <div className="relative w-full aspect-square max-w-[280px] sm:max-w-[400px] lg:max-w-[500px] mx-auto">
 
                         {/* Outer Dashed Orbit */}
                         <div className="absolute inset-[-10%] border border-[#d4af37]/30 border-dashed rounded-full animate-[spin_60s_linear_infinite]"></div>
@@ -127,23 +127,23 @@ export const Hero = () => {
                         </div>
 
                         {/* Floating Floating Badges */}
-                        <div className="absolute top-[10%] -left-[10%] z-20 bg-gradient-to-br from-[#ffffff] to-[#fffcf5] p-3 rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.3)] border border-[#d4af37]/30 animate-[float_4s_ease-in-out_infinite] backdrop-blur-md">
-                            <div className="flex items-center gap-3 border border-[#d4af37]/20 rounded-xl px-4 py-2 bg-white/50">
-                                <span className="text-2xl">🌶️</span>
-                                <span className="font-bold text-[#4a0404] text-sm uppercase tracking-wider font-heading">Rich Spices</span>
+                        <div className="absolute top-[10%] -left-[10%] sm:-left-[5%] z-20 bg-gradient-to-br from-[#ffffff] to-[#fffcf5] p-2 sm:p-3 rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.3)] border border-[#d4af37]/30 animate-[float_4s_ease-in-out_infinite] backdrop-blur-md">
+                            <div className="flex items-center gap-2 sm:gap-3 border border-[#d4af37]/20 rounded-xl px-2 py-1 sm:px-4 sm:py-2 bg-white/50">
+                                <span className="text-lg sm:text-2xl">🌶️</span>
+                                <span className="font-bold text-[#4a0404] text-[10px] sm:text-sm uppercase tracking-wider font-heading">Rich Spices</span>
                             </div>
                         </div>
 
-                        <div className="absolute bottom-[20%] -right-[5%] z-20 bg-gradient-to-br from-[#ffffff] to-[#fffcf5] p-3 rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.3)] border border-[#d4af37]/30 animate-[float_5s_ease-in-out_infinite_alternate] backdrop-blur-md">
-                            <div className="flex items-center gap-3 border border-[#d4af37]/20 rounded-xl px-4 py-2 bg-white/50">
-                                <span className="text-2xl">🍯</span>
-                                <span className="font-bold text-[#4a0404] text-sm uppercase tracking-wider font-heading">100% Natural</span>
+                        <div className="absolute bottom-[20%] -right-[5%] z-20 bg-gradient-to-br from-[#ffffff] to-[#fffcf5] p-2 sm:p-3 rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.3)] border border-[#d4af37]/30 animate-[float_5s_ease-in-out_infinite_alternate] backdrop-blur-md">
+                            <div className="flex items-center gap-2 sm:gap-3 border border-[#d4af37]/20 rounded-xl px-2 py-1 sm:px-4 sm:py-2 bg-white/50">
+                                <span className="text-lg sm:text-2xl">🍯</span>
+                                <span className="font-bold text-[#4a0404] text-[10px] sm:text-sm uppercase tracking-wider font-heading">100% Natural</span>
                             </div>
                         </div>
 
                         {/* Bottom Center Seal */}
-                        <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 z-30 bg-gradient-to-b from-[#d4af37] to-[#8b6914] w-[90px] h-[90px] rounded-full flex items-center justify-center shadow-[0_10px_20px_rgba(0,0,0,0.4)] border-4 border-[#2b0202]">
-                            <svg className="w-8 h-8 text-[#2b0202]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" /></svg>
+                        <div className="absolute -bottom-4 sm:-bottom-6 left-1/2 -translate-x-1/2 z-30 bg-gradient-to-b from-[#d4af37] to-[#8b6914] w-[60px] h-[60px] sm:w-[90px] sm:h-[90px] rounded-full flex items-center justify-center shadow-[0_10px_20px_rgba(0,0,0,0.4)] border-[3px] sm:border-4 border-[#2b0202]">
+                            <svg className="w-5 h-5 sm:w-8 sm:h-8 text-[#2b0202]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" /></svg>
                         </div>
 
                     </div>

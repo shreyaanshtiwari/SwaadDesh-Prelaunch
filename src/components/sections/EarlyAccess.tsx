@@ -55,7 +55,7 @@ export const EarlyAccess = () => {
     };
 
     return (
-        <Section id="early-access" className="relative overflow-hidden text-[#4a0404] pt-12 pb-28 border-b-[4px] border-[#d4af37] bg-gradient-to-b from-[#f4ecd8] to-[#fdfbf7]">
+        <Section id="early-access" className="relative overflow-hidden text-[#4a0404] pt-12 pb-12 lg:pb-28 border-b-[4px] border-[#d4af37] bg-gradient-to-b from-[#f4ecd8] to-[#fdfbf7]">
             {/* Elegant Background Patterns */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(212,175,55,0.06)_0%,transparent_70%)] rounded-full pointer-events-none translate-x-1/4 -translate-y-1/4"></div>
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(212,175,55,0.04)_0%,transparent_70%)] rounded-full pointer-events-none -translate-x-1/4 translate-y-1/4"></div>
@@ -70,7 +70,7 @@ export const EarlyAccess = () => {
                         <span className="text-[#b8860b] font-bold uppercase tracking-[4px] text-xs">A Taste of Royalty</span>
                         <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#d4af37]"></div>
                     </div>
-                    <h2 className="text-4xl md:text-[56px] font-black tracking-tight font-heading drop-shadow-sm text-[#4a0404]">
+                    <h2 className="text-3xl md:text-[56px] font-black tracking-tight font-heading drop-shadow-sm text-[#4a0404]">
                         Join the <span className="text-[#8f0f0d] font-light italic">Waitlist</span>
                     </h2>
                     <p className="text-[#8b6914] text-lg md:text-xl font-heading italic max-w-2xl mx-auto">

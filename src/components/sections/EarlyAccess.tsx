@@ -6,7 +6,8 @@ import { Button } from '@/components/ui/Button';
 import { InputField } from '@/components/ui/InputField';
 
 export const EarlyAccess = () => {
-    const [formData, setFormData] = useState({ name: '', email: '' });
+    const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
+    const [agreedToTerms, setAgreedToTerms] = useState(false);
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
     const [message, setMessage] = useState('');
 
@@ -14,18 +15,34 @@ export const EarlyAccess = () => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     };
 
+    const validatePhone = (phone: string) => {
+        return /^[6-9]\d{9}$/.test(phone.replace(/\s/g, ''));
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (!formData.name.trim() || !formData.email.trim()) {
+        if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
             setStatus('error');
-            setMessage('Name and email are required.');
+            setMessage('Name, email and phone number are required.');
             return;
         }
 
         if (!validateEmail(formData.email)) {
             setStatus('error');
             setMessage('Please enter a valid email address.');
+            return;
+        }
+
+        if (!validatePhone(formData.phone)) {
+            setStatus('error');
+            setMessage('Please enter a valid 10-digit Indian mobile number.');
+            return;
+        }
+
+        if (!agreedToTerms) {
+            setStatus('error');
+            setMessage('Please agree to the Terms & Conditions and Privacy Policy.');
             return;
         }
 
@@ -43,7 +60,8 @@ export const EarlyAccess = () => {
             if (response.ok) {
                 setStatus('success');
                 setMessage(data.message || 'You are successfully added to the early access list. You will receive launch updates and exclusive discounts.');
-                setFormData({ name: '', email: '' });
+                setFormData({ name: '', email: '', phone: '' });
+                setAgreedToTerms(false);
             } else {
                 setStatus('error');
                 setMessage(data.error || 'Something went wrong. Please try again.');
@@ -133,6 +151,40 @@ export const EarlyAccess = () => {
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                     disabled={status === 'loading'}
                                 />
+                                <InputField
+                                    label="Phone Number"
+                                    type="tel"
+                                    placeholder="e.g. 98765 43210"
+                                    value={formData.phone}
+                                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                    disabled={status === 'loading'}
+                                />
+
+                                {/* Terms & Privacy Policy Checkbox */}
+                                <label className="flex items-start gap-3 cursor-pointer group select-none">
+                                    <div className="relative mt-0.5 flex-shrink-0">
+                                        <input
+                                            type="checkbox"
+                                            checked={agreedToTerms}
+                                            onChange={(e) => setAgreedToTerms(e.target.checked)}
+                                            disabled={status === 'loading'}
+                                            className="sr-only peer"
+                                        />
+                                        <div className="w-5 h-5 rounded border-2 border-[#d4af37]/60 bg-white peer-checked:bg-[#d4af37] peer-checked:border-[#b8860b] transition-all duration-200 flex items-center justify-center shadow-sm group-hover:border-[#d4af37]">
+                                            {agreedToTerms && (
+                                                <svg className="w-3 h-3 text-[#2b0202]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <span className="text-[12px] text-[#5d4037] leading-relaxed">
+                                        I agree to the{' '}
+                                        <a href="/terms" target="_blank" className="text-[#8f0f0d] font-semibold underline underline-offset-2 hover:text-[#d4af37] transition-colors">Terms & Conditions</a>
+                                        {' '}and{' '}
+                                        <a href="/privacy" target="_blank" className="text-[#8f0f0d] font-semibold underline underline-offset-2 hover:text-[#d4af37] transition-colors">Privacy Policy</a>
+                                    </span>
+                                </label>
 
                                 {status === 'error' && (
                                     <p className="text-[#c62828] text-sm font-medium bg-[#ffebee] p-3 rounded-md border border-[#ffcdd2] text-center">{message}</p>

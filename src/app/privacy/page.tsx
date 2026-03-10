@@ -29,16 +29,17 @@ export default function PrivacyPolicy() {
                         <h2>2. Information We Collect</h2>
                         <p>During our pre-launch phase, we collect very limited information. Specifically, when you join our waitlist or contact us, we collect:</p>
                         <ul>
-                            <li><strong>Contact Information:</strong> Your name and email address.</li>
-                            <li><strong>Communication Data:</strong> Information you choose to provide if you contact us directly via email.</li>
+                            <li><strong>Contact Information:</strong> Your name, email address, and mobile phone number.</li>
+                            <li><strong>Communication Data:</strong> Information you choose to provide if you contact us directly via email or phone.</li>
                         </ul>
 
                         <h2>3. How We Use Your Information</h2>
                         <p>The information we collect is used solely for the following purposes:</p>
                         <ul>
                             <li>To add you to our waitlist and secure your early-bird privileges.</li>
-                            <li>To send you updates regarding our launch dates, exclusive offers, and product sneak peeks.</li>
+                            <li>To send you updates regarding our launch dates, exclusive offers, and product sneak peeks via email or SMS/WhatsApp.</li>
                             <li>To respond to your inquiries if you reach out to us.</li>
+                            <li>To occasionally share launch-related news and announcements directly on your mobile number.</li>
                         </ul>
                         <p>We do not share, sell, or rent your personal information to any third parties.</p>
 

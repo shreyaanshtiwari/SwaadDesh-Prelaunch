@@ -10,6 +10,7 @@ function doPost(e) {
     
     var email = data.email.toLowerCase().trim();
     var name = data.name.trim();
+    var phone = (data.phone || '').toString().trim();
     var timestamp = data.timestamp || new Date().toISOString();
 
     // 1. Duplicates check (robust)
@@ -27,7 +28,8 @@ function doPost(e) {
     }
 
     // 2. Save Data First
-    sheet.appendRow([timestamp, name, email]);
+    // Columns: A=Timestamp, B=Name, C=Email, D=Phone
+    sheet.appendRow([timestamp, name, email, phone]);
 
     // 3. Try to Send Email
     var emailStatus = "sent";
@@ -36,7 +38,7 @@ function doPost(e) {
     } catch (err) {
       emailStatus = "failed: " + err.toString();
       // Optional: Log failure in a new column
-      sheet.getRange(sheet.getLastRow(), 4).setValue(emailStatus);
+      sheet.getRange(sheet.getLastRow(), 5).setValue(emailStatus); // Column E for email status
     }
 
     return ContentService.createTextOutput(JSON.stringify({ 

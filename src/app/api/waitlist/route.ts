@@ -6,7 +6,7 @@ const GOOGLE_SHEETS_WEB_APP_URL = process.env.GOOGLE_SHEETS_WEB_APP_URL || '';
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const { name, email } = body;
+        const { name, email, phone } = body;
 
         // 1. Validation
         if (!name || !name.trim()) {
@@ -15,6 +15,10 @@ export async function POST(request: Request) {
 
         if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             return NextResponse.json({ error: 'Valid email is required' }, { status: 400 });
+        }
+
+        if (!phone || !/^[6-9]\d{9}$/.test(phone.replace(/\s/g, ''))) {
+            return NextResponse.json({ error: 'Valid 10-digit Indian mobile number is required' }, { status: 400 });
         }
 
         // 2. Storage to Google Sheets via Web App URL
@@ -31,6 +35,7 @@ export async function POST(request: Request) {
             body: JSON.stringify({
                 name: name.trim(),
                 email: email.toLowerCase().trim(),
+                phone: phone.replace(/\s/g, ''),
                 timestamp: new Date().toISOString()
             }),
             headers: {

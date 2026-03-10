@@ -27,7 +27,7 @@ export default function TermsOfService() {
                         <p>Welcome to SwadDesh. Currently, we operate as a informational pre-launch website. By accessing or using our website, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the website.</p>
 
                         <h2>2. Waitlist and Early Access</h2>
-                        <p>By joining our waitlist, you agree to provide accurate information (your name and email address) for the purpose of receiving updates about our launch and exclusive early-bird privileges. We reserve the right to limit waitlist spaces or revoke early-access offers at our discretion to prevent abuse.</p>
+                        <p>By joining our waitlist, you agree to provide accurate information (your name, email address, and mobile phone number) for the purpose of receiving updates about our launch and exclusive early-bird privileges via email, SMS, or WhatsApp. We reserve the right to limit waitlist spaces or revoke early-access offers at our discretion to prevent abuse.</p>
 
                         <h2>3. Intellectual Property</h2>
                         <p>The content, layout, design, data, graphics, and products showcased on this website are protected by intellectual property laws. You may not copy, reproduce, or use our branding or product previews for commercial purposes without our express permission.</p>

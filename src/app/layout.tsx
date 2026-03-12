@@ -17,20 +17,20 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'SwadDesh | Authentic Taste Brand - Coming Soon',
-  description: 'Experience the rich culinary heritage of India with SwadDesh. We bring traditional, handcrafted, and authentic flavors straight to your doorstep. Join our waitlist for early access.',
-  keywords: ['SwadDesh', 'indian food', 'authentic food', 'traditional Indian recipes', 'organic ghee', 'handcrafted spices', 'Indian pickles'],
+  title: 'Swaddesh | Authentic Taste Brand - Coming Soon',
+  description: 'Experience the rich culinary heritage of India with Swaddesh. We bring traditional, handcrafted, and authentic flavors straight to your doorstep. Join our waitlist for early access.',
+  keywords: ['Swaddesh', 'indian food', 'authentic food', 'traditional Indian recipes', 'organic ghee', 'handcrafted spices', 'Indian pickles'],
   openGraph: {
-    title: 'SwadDesh | Authentic Taste Brand - Coming Soon',
-    description: 'Experience the rich culinary heritage of India with SwadDesh. Join our waitlist for exclusive early access and discounts.',
-    url: 'https://swaddesh.com',
-    siteName: 'SwadDesh',
+    title: 'Swaddesh | Authentic Taste Brand - Coming Soon',
+    description: 'Experience the rich culinary heritage of India with Swaddesh. Join our waitlist for exclusive early access and discounts.',
+    url: 'https://swaddesh.in',
+    siteName: 'Swaddesh',
     images: [
       {
-        url: 'https://swaddesh.com/og-image.jpg', // Placeholder
+        url: 'https://swaddesh.in/og-image.jpg', // Placeholder
         width: 1200,
         height: 630,
-        alt: 'SwadDesh - The Authentic Taste of Home',
+        alt: 'Swaddesh - The Authentic Taste of Home',
       },
     ],
     locale: 'en_IN',
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SwadDesh | Authentic Taste Brand - Coming Soon',
-    description: 'Experience the rich culinary heritage of India with SwadDesh. Join our waitlist.',
-    images: ['https://swaddesh.com/og-image.jpg'], // Placeholder
+    title: 'Swaddesh | Authentic Taste Brand - Coming Soon',
+    description: 'Experience the rich culinary heritage of India with Swaddesh. Join our waitlist.',
+    images: ['https://swaddesh.in/og-image.jpg'], // Placeholder
   },
   robots: {
     index: true,
@@ -61,8 +61,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${outfit.variable} ${playfair.variable} font-body bg-cream text-text-dark antialiased selection:bg-maroon selection:text-gold overflow-x-hidden`}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body 
+        className={`${outfit.variable} ${playfair.variable} font-body bg-cream text-text-dark antialiased selection:bg-maroon selection:text-gold overflow-x-hidden`}
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

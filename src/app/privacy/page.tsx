@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Footer } from '@/components/sections/Footer';
 
 export const metadata = {
-    title: 'Privacy Policy | SwaadDesh',
-    description: 'Privacy Policy for SwaadDesh',
+    title: 'Privacy Policy | Swaddesh',
+    description: 'Privacy Policy for Swaddesh',
 };
 
 export default function PrivacyPolicy() {
@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
 
                     <div className="space-y-8 text-[#5d4037] leading-relaxed prose-p:mb-4 prose-h2:text-2xl prose-h2:font-heading prose-h2:text-[#4a0404] prose-h2:font-bold prose-h2:mb-4 prose-h2:mt-8 prose-h3:text-xl prose-h3:font-heading prose-h3:text-[#8f0f0d] prose-h3:mt-6 prose-h3:mb-3 prose-li:mb-2 prose-ul:list-disc prose-ul:pl-6">
                         <h2>1. Introduction</h2>
-                        <p>Welcome to SwadDesh. Currently, SwadDesh is in its pre-launch phase. This privacy policy explains how we handle the personal information you provide when joining our waitlist and interacting with our pre-launch website.</p>
+                        <p>Welcome to Swaddesh. Currently, Swaddesh is in its pre-launch phase. This privacy policy explains how we handle the personal information you provide when joining our waitlist and interacting with our pre-launch website.</p>
 
                         <h2>2. Information We Collect</h2>
                         <p>During our pre-launch phase, we collect very limited information. Specifically, when you join our waitlist or contact us, we collect:</p>
@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
                         <p>You may request to be removed from our waitlist and mailing list at any time. If you wish to have your information deleted from our records, simply contact us using the email below, or use the unsubscribe link provided in any of our promotional emails.</p>
 
                         <h2>6. Changes to This Policy</h2>
-                        <p>As we transition from our pre-launch phase to a fully operational e-commerce platform, this Privacy Policy will be updated to reflect our full services. We will notify waitlist members of significant updates to this policy.</p>
+                        <p>As we transition from our pre-launch phase to a fully operational e-commerce platform, this Privacy Policy will be updated to reflect our full services. We will notify Swaddesh members of significant updates to this policy.</p>
 
                         <h2>7. Contact Us</h2>
                         <p>If you have any questions about this privacy policy, please contact us at:</p>

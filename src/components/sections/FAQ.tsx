@@ -48,6 +48,7 @@ export const FAQ = () => {
                                 className="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none"
                                 onClick={() => toggleFaq(index)}
                                 aria-expanded={openIndex === index}
+                                suppressHydrationWarning
                             >
                                 <span className="font-bold text-lg sm:text-xl text-[#4a0404] font-body tracking-wide">{faq.question}</span>
                                 <span className={`transform transition-transform duration-300 flex-shrink-0 ml-4 ${openIndex === index ? 'rotate-180 text-[#d4af37]' : 'text-[#8b6914]'}`}>

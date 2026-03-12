@@ -40,7 +40,7 @@ export const Navbar = () => {
                 <Link href="/" className="relative z-10 flex items-center">
                     <Image
                         src="/Logo.png"
-                        alt="SwadDesh Logo"
+                        alt="Swaddesh Logo"
                         width={isScrolled ? 120 : 140}
                         height={isScrolled ? 35 : 45}
                         className="object-contain transition-all duration-500"
@@ -53,18 +53,21 @@ export const Navbar = () => {
                     <button
                         onClick={() => scrollToSection('about')}
                         className="text-[#fef5e7] hover:text-[#ffd700] text-sm font-medium tracking-wide uppercase transition-colors"
+                        suppressHydrationWarning
                     >
                         Our Story
                     </button>
                     <button
                         onClick={() => scrollToSection('products')}
                         className="text-[#fef5e7] hover:text-[#ffd700] text-sm font-medium tracking-wide uppercase transition-colors"
+                        suppressHydrationWarning
                     >
                         Delicacies
                     </button>
                     <button
                         onClick={() => scrollToSection('why-us')}
                         className="text-[#fef5e7] hover:text-[#ffd700] text-sm font-medium tracking-wide uppercase transition-colors"
+                        suppressHydrationWarning
                     >
                         Values
                     </button>

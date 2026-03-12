@@ -4,9 +4,55 @@ import React, { useState } from 'react';
 import { Section } from '@/components/ui/Section';
 import { Button } from '@/components/ui/Button';
 import { InputField } from '@/components/ui/InputField';
+import { SelectField } from '@/components/ui/SelectField';
+
+const INDIAN_STATES = [
+    { value: 'Andhra Pradesh', label: 'Andhra Pradesh' },
+    { value: 'Arunachal Pradesh', label: 'Arunachal Pradesh' },
+    { value: 'Assam', label: 'Assam' },
+    { value: 'Bihar', label: 'Bihar' },
+    { value: 'Chhattisgarh', label: 'Chhattisgarh' },
+    { value: 'Goa', label: 'Goa' },
+    { value: 'Gujarat', label: 'Gujarat' },
+    { value: 'Haryana', label: 'Haryana' },
+    { value: 'Himachal Pradesh', label: 'Himachal Pradesh' },
+    { value: 'Jharkhand', label: 'Jharkhand' },
+    { value: 'Karnataka', label: 'Karnataka' },
+    { value: 'Kerala', label: 'Kerala' },
+    { value: 'Madhya Pradesh', label: 'Madhya Pradesh' },
+    { value: 'Maharashtra', label: 'Maharashtra' },
+    { value: 'Manipur', label: 'Manipur' },
+    { value: 'Meghalaya', label: 'Meghalaya' },
+    { value: 'Mizoram', label: 'Mizoram' },
+    { value: 'Nagaland', label: 'Nagaland' },
+    { value: 'Odisha', label: 'Odisha' },
+    { value: 'Punjab', label: 'Punjab' },
+    { value: 'Rajasthan', label: 'Rajasthan' },
+    { value: 'Sikkim', label: 'Sikkim' },
+    { value: 'Tamil Nadu', label: 'Tamil Nadu' },
+    { value: 'Telangana', label: 'Telangana' },
+    { value: 'Tripura', label: 'Tripura' },
+    { value: 'Uttar Pradesh', label: 'Uttar Pradesh' },
+    { value: 'Uttarakhand', label: 'Uttarakhand' },
+    { value: 'West Bengal', label: 'West Bengal' },
+    { value: 'Andaman and Nicobar Islands', label: 'Andaman and Nicobar Islands' },
+    { value: 'Chandigarh', label: 'Chandigarh' },
+    { value: 'Dadra and Nagar Haveli and Daman and Diu', label: 'Dadra and Nagar Haveli and Daman and Diu' },
+    { value: 'Delhi', label: 'Delhi' },
+    { value: 'Jammu and Kashmir', label: 'Jammu and Kashmir' },
+    { value: 'Ladakh', label: 'Ladakh' },
+    { value: 'Lakshadweep', label: 'Lakshadweep' },
+    { value: 'Puducherry', label: 'Puducherry' },
+];
 
 export const EarlyAccess = () => {
-    const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
+    const [formData, setFormData] = useState({ 
+        name: '', 
+        email: '', 
+        phone: '', 
+        state: '', 
+        interests: '' 
+    });
     const [agreedToTerms, setAgreedToTerms] = useState(false);
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
     const [message, setMessage] = useState('');
@@ -60,7 +106,7 @@ export const EarlyAccess = () => {
             if (response.ok) {
                 setStatus('success');
                 setMessage(data.message || 'You are successfully added to the early access list. You will receive launch updates and exclusive discounts.');
-                setFormData({ name: '', email: '', phone: '' });
+                setFormData({ name: '', email: '', phone: '', state: '', interests: '' });
                 setAgreedToTerms(false);
             } else {
                 setStatus('error');
@@ -85,14 +131,14 @@ export const EarlyAccess = () => {
                 <div className="space-y-6">
                     <div className="flex items-center justify-center gap-4">
                         <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#d4af37]"></div>
-                        <span className="text-[#b8860b] font-bold uppercase tracking-[4px] text-xs">A Taste of Royalty</span>
+                        <span className="text-[#b8860b] font-bold uppercase tracking-[4px] text-xs">Authentic Taste of Bharat</span>
                         <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#d4af37]"></div>
                     </div>
                     <h2 className="text-3xl md:text-[56px] font-black tracking-tight font-heading drop-shadow-sm text-[#4a0404]">
                         Join the <span className="text-[#8f0f0d] font-light italic">Waitlist</span>
                     </h2>
                     <p className="text-[#8b6914] text-lg md:text-xl font-heading italic max-w-2xl mx-auto">
-                        Be the first to experience authentic heritage flavors and claim an exclusive 20% early-bird privileges on your inaugural royal feast.
+                        Be the first to experience Swaddesh heritage flavors and claim exclusive privileges on your inaugural royal feast.
                     </p>
                     {/* Waitlist Incentive */}
                     <div className="mt-6 flex justify-center">
@@ -127,14 +173,17 @@ export const EarlyAccess = () => {
                             </Button>
                         </div>
                     ) : (
-                        <form onSubmit={handleSubmit} className="relative z-10 bg-gradient-to-br from-[#ffffff] to-[#fffcf5] p-10 rounded-2xl shadow-[0_20px_60px_rgba(107,10,9,0.05)] border border-[#d4af37]/30 text-left space-y-6">
+                        <form onSubmit={handleSubmit} className="relative z-10 bg-white p-10 rounded-2xl shadow-[0_25px_80px_rgba(107,10,9,0.08)] border border-[#d4af37]/40 text-left space-y-6">
                             {/* Inner Corner Accents */}
                             <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-[#d4af37]/40 m-4 pointer-events-none"></div>
                             <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-[#d4af37]/40 m-4 pointer-events-none"></div>
                             <div className="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-[#d4af37]/40 m-4 pointer-events-none"></div>
                             <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-[#d4af37]/40 m-4 pointer-events-none"></div>
 
-                            <div className="space-y-5 relative z-10 pt-2">
+                            <div className="space-y-5 relative z-20 pt-2">
+                                <p className="text-[11px] text-[#8b6914] text-center uppercase tracking-[2px] font-bold opacity-70">
+                                    ~ We respect your privacy ~
+                                </p>
                                 <InputField
                                     label="Full Name"
                                     type="text"
@@ -151,14 +200,34 @@ export const EarlyAccess = () => {
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                     disabled={status === 'loading'}
                                 />
-                                <InputField
-                                    label="Phone Number"
-                                    type="tel"
-                                    placeholder="e.g. 98765 43210"
-                                    value={formData.phone}
-                                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                    disabled={status === 'loading'}
-                                />
+                                <div className="space-y-1">
+                                    <InputField
+                                        label="Phone Number"
+                                        type="tel"
+                                        placeholder="e.g. 98765 43210"
+                                        value={formData.phone}
+                                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                        disabled={status === 'loading'}
+                                    />
+                                    <p className="text-[10px] text-[#8b6914] ml-1 opacity-80 font-medium">✨ No spam. Highly Secured.</p>
+                                </div>
+                                
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <SelectField
+                                        label="State"
+                                        options={INDIAN_STATES}
+                                        value={formData.state}
+                                        onChange={(e) => setFormData({ ...formData, state: e.target.value })}
+                                        disabled={status === 'loading'}
+                                    />
+                                    <InputField
+                                        label="Interests in Delicacies"
+                                        placeholder="e.g. Padukiya, Arse, Petha"
+                                        value={formData.interests}
+                                        onChange={(e) => setFormData({ ...formData, interests: e.target.value })}
+                                        disabled={status === 'loading'}
+                                    />
+                                </div>
 
                                 {/* Terms & Privacy Policy Checkbox */}
                                 <label className="flex items-start gap-3 cursor-pointer group select-none">
@@ -203,15 +272,12 @@ export const EarlyAccess = () => {
                                 </Button>
                             </div>
 
-                            <p className="text-[11px] text-[#8b6914] text-center uppercase tracking-[2px] font-bold mt-4 opacity-70 relative z-10">
-                                ~ We respect your privacy. No spam. ~
-                            </p>
                         </form>
                     )}
                 </div>
 
                 {/* Trust Badges under Form */}
-                <div className="relative z-10 !mt-4 lg:!mt-4 flex flex-nowrap justify-center items-start gap-4 sm:gap-6 md:gap-12 opacity-80 overflow-hidden max-w-full mx-auto">
+                <div className="relative z-0 !mt-4 lg:!mt-4 flex flex-nowrap justify-center items-start gap-4 sm:gap-6 md:gap-12 opacity-80 overflow-hidden max-w-full mx-auto">
                     <div className="flex flex-col items-center gap-2 group cursor-default flex-1 max-w-[100px] md:max-w-none">
                         <div className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 rounded-full border border-[#d4af37]/40 flex items-center justify-center bg-white/50 backdrop-blur-sm group-hover:bg-[#d4af37]/10 transition-colors">
                             <span className="text-[#8f0f0d] text-base md:text-xl">🌿</span>

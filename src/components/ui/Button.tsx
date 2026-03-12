@@ -26,7 +26,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} ${fullWidth ? 'w-full' : ''} ${className}`;
 
     return (
-      <button ref={ref} className={classes} {...props}>
+      <button 
+        ref={ref} 
+        className={classes} 
+        {...props}
+        suppressHydrationWarning
+      >
         {children}
       </button>
     );

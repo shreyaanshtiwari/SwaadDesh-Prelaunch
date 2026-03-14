@@ -23,7 +23,7 @@ export const ProductPreview = () => {
                         <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#d4af37]"></div>
                     </div>
                     <p className="text-[#8b6914] text-base sm:text-lg lg:text-xl font-heading italic max-w-3xl mx-auto px-4">
-                        Authentic flavors being perfected by our master artisans. Coming to your palate soon.
+                        Authentic flavors being perfected by our master artisans. Coming to your doorstep soon.
                     </p>
                 </div>
 

@@ -79,7 +79,7 @@ function sendConfirmationEmail(data) {
         <p style="font-size: 18px; line-height: 1.6; margin-bottom: 25px; color: #ffd700;">Pranam <strong>${data.name}</strong>,</p>
         
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 25px; color: #fdfbf7; opacity: 0.9;">
-          Thank you for joining the exclusive SwaadDesh waitlist. We are thrilled to have you with us on this journey to rediscover the authentic, royal heritage flavors of Bharat.
+          Thank you for joining the exclusive SwadDesh waitlist. We are thrilled to have you with us on this journey to rediscover the authentic, royal heritage flavors of Bharat.
         </p>
         
         <div style="background-color: #2b0202; border-radius: 12px; padding: 25px; margin-bottom: 30px; border: 1px solid #d4af37;">
@@ -107,6 +107,6 @@ function sendConfirmationEmail(data) {
   // This requires the script to be deployed with "Execute as: Me" permissions.
   GmailApp.sendEmail(data.email, subject, "", {
     htmlBody: htmlBody,
-    name: "SwaadDesh Heritage"
+    name: "SwadDesh Heritage"
   });
 }

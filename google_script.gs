@@ -64,14 +64,14 @@ function doPost(e) {
 
 function sendConfirmationEmail(data) {
   // Pure ASCII subject to avoid encoding issues (like question marks) in some email clients
-  const subject = "Welcome to the Royal SwaadDesh Waitlist";
+  const subject = "Welcome to the Royal SwadDesh Waitlist";
   const logoUrl = "https://swaddesh.in/Logo.png";
   
   // HTML Email Body - Premium Dark Royal Theme
   const htmlBody = `
     <div style="font-family: 'Georgia', serif; max-width: 600px; margin: 0 auto; border: 2px solid #d4af37; background-color: #1a0101; color: #fdfbf7; overflow: hidden; border-radius: 8px;">
       <div style="text-align: center; padding: 40px 20px; border-bottom: 1px solid #d4af37;">
-        <img src="${logoUrl}" alt="SwaadDesh Logo" style="width: 180px; display: block; margin: 0 auto;">
+        <img src="${logoUrl}" alt="SwadDesh Logo" style="width: 180px; display: block; margin: 0 auto;">
         <div style="height: 1px; width: 60px; background-color: #d4af37; margin: 20px auto 0 auto;"></div>
       </div>
       
@@ -97,7 +97,7 @@ function sendConfirmationEmail(data) {
 
         <div style="text-align: center; border-top: 1px solid #d4af37; padding-top: 30px; margin-top: 30px;">
           <p style="font-size: 14px; font-style: italic; color: #d4af37; margin-bottom: 5px;">~ The Taste of Authenticity ~</p>
-          <p style="font-weight: bold; color: #ffd700; margin-top: 0; font-size: 18px; letter-spacing: 1px;">SwaadDesh Heritage</p>
+          <p style="font-weight: bold; color: #ffd700; margin-top: 0; font-size: 18px; letter-spacing: 1px;">SwadDesh Heritage</p>
         </div>
       </div>
     </div>

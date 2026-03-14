@@ -42,7 +42,7 @@ export const ProductPreview = () => {
                                     <Sparkles className="text-[#ffd700] w-10 h-10" />
                                 </div>
                                 <div className="relative z-20 h-[1px] w-12 bg-[#d4af37]/40 mb-4 group-hover:w-20 transition-all duration-500"></div>
-                                <div className="relative z-20 text-[#ffd700] text-[10px] uppercase font-bold tracking-[4px] opacity-60">Locked Selection</div>
+                                <div className="relative z-20 text-[#ffd700] text-[8px] sm:text-[10px] uppercase font-bold tracking-[2px] sm:tracking-[4px] opacity-60 px-2 leading-relaxed">Locked Selection</div>
                             </div>
                         </div>
 
@@ -57,7 +57,7 @@ export const ProductPreview = () => {
                                     <Crown className="text-[#ffd700] w-10 h-10" />
                                 </div>
                                 <div className="relative z-20 h-[1px] w-12 bg-[#d4af37]/40 mb-4 group-hover:w-20 transition-all duration-500"></div>
-                                <div className="relative z-20 text-[#ffd700] text-[10px] uppercase font-bold tracking-[4px] opacity-60">Legacy Uncovering</div>
+                                <div className="relative z-20 text-[#ffd700] text-[8px] sm:text-[10px] uppercase font-bold tracking-[2px] sm:tracking-[4px] opacity-60 px-2 leading-relaxed">Legacy Uncovering</div>
                             </div>
                         </div>
 
